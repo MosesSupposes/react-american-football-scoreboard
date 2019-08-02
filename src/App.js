@@ -32,6 +32,12 @@ function App() {
         break
     }
   }
+
+  function handleScoreReset() {
+    setHomeScore(0)
+    setAwayScore(0)
+  }
+
   return (
     <div className="container">
       <section className="scoreboard">
@@ -81,6 +87,13 @@ function App() {
             Away Field Goal
           </button>
         </div>
+
+        <button 
+          className="reset"
+          onClick={handleScoreReset}
+          >
+          Reset Scores
+        </button>
       </section>
     </div>
   );
